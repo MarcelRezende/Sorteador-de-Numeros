@@ -1,0 +1,244 @@
+.randomize-section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 82.5rem;
+  width: 100%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  gap: 1rem;
+}
+
+.choice h2 {
+  color: var(--content-primary);
+  font: var(--label-large);
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+
+.choice strong {
+  font: var(--label-large);
+  text-transform: uppercase;
+}
+
+.choice p {
+  color: var(--content-secondary);
+  font: var(--paragraph-large);
+  font-size: 1.2rem;
+  margin-top: .2rem;
+}
+
+.numbers {
+  display: flex;
+  gap: 1rem;
+ margin-top: 2rem;
+
+}
+
+.numbers h3 {
+  text-align: center;
+  font: var(--label-medium);
+  color: var(--content-secondary);
+}
+
+.numbers input {
+  width: 6rem;
+  height: 3rem;
+  border-radius: .5rem;
+  text-align: center;
+  background-color: var(--background-grey);
+}
+
+.numbers input {
+  font: var(--display-small);
+  font-size: 2rem;
+  color: var(--content-primary);
+  border: none;
+}
+
+.input-numbers input {
+  margin-top: .3rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Criando o botão liga - desliga */
+
+.button-click {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  color: var(--content-primary);
+  font: var(--label-small);
+  text-transform: uppercase;
+  user-select: none;
+ 
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.button-click input {
+  display: none;
+}
+
+.trilho {
+  width: 48px;
+  height: 26px;
+  background-color: #33333d;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden; 
+  flex-shrink: 0;
+}
+
+.trilho::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #c772ef 0%, #8c9bf7 100%);
+  opacity: 0; /* Começa invisível! */
+  transition: opacity 0.3s ease; /* Transição perfeita ao ligar E desligar */
+}
+
+
+.trilho::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  z-index: 2; 
+  transition: transform 0.3s ease;
+}
+
+/* --- ESTADOS DE LIGADO --- */
+
+.button-click input:checked + .trilho::after {
+  opacity: 1;
+}
+
+
+.button-click input:checked + .trilho::before {
+  transform: translateX(22px);
+}
+
+
+.button1 button {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 100%;
+  max-width: 28.5rem;
+  height: 3.5rem;
+
+  background:linear-gradient(var(--background-grey), var(--background-grey)) padding-box;
+
+  border-radius: .5rem;
+  
+  border: 1px solid transparent;
+  cursor: pointer;
+  
+  z-index: 1;
+}
+
+
+  .button1 span {
+  display: flex;
+  align-items: center;
+
+  font: var(--label-small);
+  color: var(--content-primary);
+  text-transform: uppercase;
+
+  gap: .5rem;
+  }
+ 
+  .button1 img {
+    transition: transform .3s ease;
+  }
+
+.button1 button:hover {
+  background: var(--background-secondary);
+}
+
+.button1 button::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+
+  background: var(--gradient-border);
+  background-size: 300% 100%;
+
+  opacity: 0;
+  pointer-events: none;
+
+  -webkit-mask:
+  linear-gradient(#fff 0 0) content-box,
+  linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.button1 button:hover img {
+  transform: translateX(5px);
+}
+
+.button1 button:hover::before {
+  opacity: 1;
+  background-size: 300% 100%;
+
+  animation: pulsar-degrade 3s linear infinite;
+}
+
+@keyframes pulsar-degrade {
+
+  0% {
+    background-position: 0% 50%;
+  }
+
+  15% {
+    background-position: 0% 50%;
+  }
+
+  30% {
+    background-position: 0% 50%;
+  }
+
+  65% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
