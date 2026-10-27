@@ -35,4 +35,42 @@ O Numbers é uma aplicação web desenvolvida com HTML, CSS e JavaScript, que pe
 ## 💡 Como utilizar
 
 1. Informe a quantidade de números que deseja sortear.
-2. Defina o intervalo num
+2. Defina o intervalo numérico desejado.
+3.Ative ou desative a opção Não repetir número.
+4.Clique no botão Sortear.
+5.Confira os resultados apresentados na tela.
+6.Quando a opção de não repetir números estiver ativada, o intervalo deverá conter números suficientes para atender à quantidade solicitada.
+
+🧠 Aprendizados
+
+Este projeto contribuiu para a prática de conceitos fundamentais do desenvolvimento front-end:
+- Manipulação do DOM com JavaScript.
+- Eventos e interatividade.
+- Geração de números aleatórios.
+- Validação de entradas do usuário.
+- Estruturação com HTML5.
+- Estilização com CSS3.
+- Desenvolvimento de interfaces intuitivas.
+
+🔮 Melhorias futuras
+
+1.Adicionar histórico de sorteios.
+2.Permitir copiar os resultados com um clique.
+3.Implementar animações durante o sorteio.
+4.Aprimorar a acessibilidade.
+
+🌐 Demonstração
+
+Acesse o projeto online:
+https://marcelrezende.github.io/Sorteador-de-Numeros/
+
+👨‍💻 Desenvolvedor
+Marcel Rezende
+
+Desenvolvido como projeto de prática e evolução em desenvolvimento web.
+
+💻 GitHub: Meu perfil
+
+🌐 Projeto de Portfólio
+
+
